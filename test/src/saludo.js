@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 function Saludo(props) {
-    return <h3>Hola {props.name} {props.lastname}</h3>;
+    return <h3 className="saludo">Hola {props.name} {props.lastname}</h3>;
 }
 
 Saludo.propTypes = {
@@ -12,7 +12,17 @@ Saludo.propTypes = {
 }
 
 export function Mensaje(props){
-    return <h3>Mensaje: {props.mensaje}</h3>;
+    return (
+        <h3 className="mensaje">
+            <span style={{
+                backgroundColor: "#cccccc",
+                color: "#000"
+            }}>
+                Mensaje:
+            </span> 
+            {props.mensaje}
+        </h3>
+    )
 }
 
 export default Saludo;
